@@ -10,7 +10,7 @@ const fileOps = async () => {
       "utf-8" );
     console.log(data);
     // using un link to delete a file named starter.txt
-    await fspromises.unlink(path.join(__dirname, "files", "starter.txt"))
+    await fspromises.unlink(path.join(__dirname, "files", "starter.txt"));
 // writing a file using writrfile
    await fspromises.writeFile(path.join(__dirname, "files", "promiseWrite.txt"), data)
 //    using append to create a new file

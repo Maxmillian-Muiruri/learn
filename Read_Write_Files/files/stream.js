@@ -1,10 +1,12 @@
-const { on } = require('events');
+// const { on } = require('events');
 const fs = require('fs');
 
-const rs = fs.createReadStream('Read_Write_Files/files/loreim.txt', {encoding: 'utf8'});
+const rs = fs.createReadStream('./files/lorem.txt', {encoding: 'utf8'});
 
-const ws = fs.createWriteStream('Read_Write_Files/files/new-lorem.txt');
+const ws = fs.createWriteStream('./files/new-lorem.txt');
 
-rs.on('data', (dataChunk) => {
-    ws.write(dataChunk)
-})
+// rs.on('data', (dataChunk) => {
+//     ws.write(dataChunk);
+
+// })
+rs.pipe(ws);
